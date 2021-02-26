@@ -11,16 +11,17 @@
          height: 300px; /* Высота поля в пикселах */
          resize: none; /* Запрещаем изменять размер */
         }
-        button{
-            display: block;
-        }
        </style>
 </head>
 <body>
     <div class="vice_verse">
         <h1>Vice Versa</h1>
-        <textarea></textarea>
-        <button>reverse</button>
+        <form action="{% url 'reverse' %}">
+            <textarea name="textarea"></textarea>
+            <br>
+            <input  type="submit" value="reverse">
+        </form>
+            
     </div>
 
 </body>
